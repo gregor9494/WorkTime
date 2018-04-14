@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:id="@+id/container"
+    android:transitionName="container"
+    android:background="@drawable/history_item_back"
+    android:elevation="@dimen/_2sdp"
+    android:padding="@dimen/_20sdp">
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:transitionName="date"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_11ssp" />
+
+    <TextView
+        android:layout_marginTop="@dimen/_2sdp"
+        android:id="@+id/tvWeekDay"
+        android:transitionName="weekDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDate"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_11ssp" />
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:id="@+id/tvHoursCount"
+        android:transitionName="hoursCount"
+        android:layout_below="@+id/tvWeekDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_14ssp" />
+
+
+</RelativeLayout>

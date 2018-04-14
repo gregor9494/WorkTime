@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context="ggaworowski.worktime.screens.history.HistoryActivity">
+
+    <TextView
+        android:id="@+id/tvHistoryLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/history_label"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_14ssp" />
+
+    <TextView
+        android:id="@+id/tvYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHistoryLabel"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_14ssp"
+        tools:text="2017" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvMonths"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_below="@+id/tvYear"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rvMonths">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/_50sdp"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tvNoWorkedHoursThisMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="@dimen/_50sdp"
+            android:text="@string/no_history_in_this_month"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:visibility="gone"
+        android:id="@+id/fabCalculatePayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/_20sdp"
+        android:src="@drawable/ic_euro_symbol_white_48dp" />
+
+</RelativeLayout>

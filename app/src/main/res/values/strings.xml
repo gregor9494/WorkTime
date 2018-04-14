@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">WorkTime</string>
+    <string name="wifi_off">zliczanie przy pomocy wifi wyłączone</string>
+    <string name="wifi_on">zliczanie przy pomocy wifi włączone</string>
+    <string name="start">Start</string>
+    <string name="show_stats">Pokaż historię</string>
+    <string name="end">Koniec</string>
+    <string name="wifi_name">Nazwa sieci wifi</string>
+    <string name="history_label">Historia pracy</string>
+    <string name="no_history_in_this_month">Brak aktywności w tym miesiącu</string>
+    <string name="january">Styczeń</string>
+    <string name="february">Luty</string>
+    <string name="march">Marzec</string>
+    <string name="april">Kwiecień</string>
+    <string name="may">Maj</string>
+    <string name="june">Czerwiec</string>
+    <string name="july">Lipiec</string>
+    <string name="august">Sierpień</string>
+    <string name="september">Wrzesień</string>
+    <string name="october">Październik</string>
+    <string name="november">Listopad</string>
+    <string name="december">Grudzień</string>
+    <string name="hour_payment_info">Miesięczna pensja</string>
+    <string name="calculate_payment_title">Przewidziane wynagrodzenie</string>
+    <string name="your_payment">Twoja pensja wyniesie:</string>
+</resources>

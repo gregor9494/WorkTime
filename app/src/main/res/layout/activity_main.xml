@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context="ggaworowski.worktime.screens.main.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/llWifiContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/wifi_button_background_off"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llWifiState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_2sdp"
+            android:paddingTop="@dimen/_2sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_wifi_white_48dp" />
+
+            <TextView
+                android:id="@+id/tvWifiStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/wifi_off"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_10ssp" />
+
+            <ImageView
+                android:id="@+id/ivWifiMore"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:src="@drawable/ic_menu_white_48dp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlWifiInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_2sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/etWifiName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@android:color/transparent"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:focusableInTouchMode="true"
+                android:hint="@string/wifi_name"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/secondary_text_dark"
+                android:layout_toStartOf="@+id/llWifiInputActions"
+                android:textSize="@dimen/_11ssp" />
+
+            <LinearLayout
+                android:id="@+id/llWifiInputActions"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/ivCancelWifi"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_close_white_48dp" />
+
+                <ImageView
+                    android:id="@+id/ivConfirmWifi"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_done_white_48dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/timeContainer"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:gravity="center"
+            android:background="@drawable/time_background">
+
+            <TextView
+                android:id="@+id/tvTimeHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_42ssp"
+                tools:text="00" />
+
+            <ggaworowski.worktime.ui.HourDots
+                android:id="@+id/tvTimeDots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_42ssp"
+                android:fontFamily="sans-serif-medium"
+                android:text=":"
+                android:paddingBottom="@dimen/_4sdp"
+                android:textColor="@android:color/white"
+                />
+
+            <TextView
+                android:id="@+id/tvTimeMinutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_42ssp"
+                tools:text="00" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvStartStop"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/timeContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/start_background"
+            android:elevation="@dimen/_2sdp"
+            android:gravity="center"
+            android:text="@string/start"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_14ssp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llShowStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:background="@drawable/background_show_history_button"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_3sdp"
+        android:paddingEnd="@dimen/_13sdp"
+        android:paddingStart="@dimen/_13sdp"
+        android:paddingTop="@dimen/_3sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/show_stats"
+            android:textColor="#1C2033"
+            android:textSize="@dimen/_11ssp" />
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:src="@drawable/ic_keyboard_arrow_right_white_48dp"
+            android:tint="#1C2033" />
+
+    </LinearLayout>
+
+</RelativeLayout>
